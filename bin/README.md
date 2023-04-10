@@ -48,7 +48,7 @@ pake url [options]
 
 ### url
 
-url 为你需要打包的网页链接 🔗，必须提供。
+url 为你需要打包的网页链接 🔗 或者本地 html 文件，必须提供。
 
 ### [options]
 
@@ -100,32 +100,26 @@ url 为你需要打包的网页链接 🔗，必须提供。
 
 #### [transparent]
 
-是否开启沉浸式头部，默认为 `false` 不开启。使用下面的命令来开启该功能。
+是否开启沉浸式头部，默认为 `false` 不开启，输入下面的命令则开启沉浸式，推荐 MacOS 用户开启。
 
 ```shell
 --transparent
-# 或者
--t
-```
-
-#### [fullscreen]
-
-打开应用后是否开启全屏，默认为 `false`，使用下面的命令开启该功能。
-
-```shell
---fullscreen
-# 或者
--f
 ```
 
 #### [resize]
 
-是否可以拖动大小，默认为 `true` 可拖动。使用下面的命令来关闭该功能。
+是否可以拖动大小，默认为 `true` 可拖动，输入下面的命令则不能对窗口大小进行拉伸。
 
 ```shell
 --no-resizable
-# 或者
--r
+```
+
+#### [fullscreen]
+
+打开应用后是否开启全屏，默认为 `false`，输入下面的命令则会自动全屏。
+
+```shell
+--fullscreen
 ```
 
 #### [multi-arch]
@@ -157,7 +151,7 @@ rustup target add x86_64-apple-darwin
 
 #### [targets]
 
-选择输出的包格式，支持deb/appimage/all，如果选择all,则同时打包deb和appimage，该选项仅支持Linux，默认为`all`。
+选择输出的包格式，支持 deb/appimage/all，如果选择 all,则同时打包 deb 和 appimage，该选项仅支持 Linux，默认为`all`。
 
 ```shell
 --targets xxx
